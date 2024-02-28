@@ -3,6 +3,8 @@
 \usepackage{amsmath} % for mathematical symbols...
 \usepackage{amsfonts} % for mathematical fonts
 \usepackage[most]{tcolorbox}
+\usepackage{tikz}
+
 
 % Define a new quote environment with a nice box
 \newtcolorbox{nicequote}{
@@ -574,6 +576,115 @@ in jih opremimo z operacijo sestavljanja preslikav z istim predpisom.
 \textbf{Trditev 1.17.} \\
 $(Inj(\Omega), \circ)$ in $(Sur(\Omega), \circ)$ sta monoida, $(Bij(\Omega), \circ)$ je grupa. \\[1em]
 Dokaz: D.N. (za domačo nalogo)
+
+
+
+\vspace*{24pt}
+
+
+\noindent
+\textbf{Trditev 1.18.} \\
+Naj bo $(A, \cdot)$ polgrupa z neutralnim elementom in naj bo 
+$$a_1, a_2, \dots, a_n \in A \text{ } (n \in \mathbb{N}) \text{ obrnljivi.}$$
+Potem velja: produkt $a_1, a_2, \dots, a_n$ je obrnljiv in njegov obrat je 
+$$(a_1, a_2, \dots, a_n)^{-1} = a_n^{-1}, \dots, a_2^{-1}, a_1^{-1}$$
+Dokaz: Indukcija po $n$: \\
+$n = 2$; Naj bosta $a_1, a_2 \in A$ obrnljiva
+\begin{align*}
+    (a_1a_2)\cdot (a_1a_2)^{-1} &= a_1 \cdot a_2 \cdot a_2^{-1} \cdot a_1^{-1} = a_1 \cdot 1 \cdot a_1^{-1} = a_1a_1^{-1} = 1 \\
+    (a_1a_2)^{-1} \cdot (a_1a_2) &= \dots \text{ podobno }
+\end{align*}
+$n = n + 1$; D.N. (za domačo nalogo)
+
+
+
+\vspace*{24pt}
+
+
+\noindent
+\textbf{Definicija 1.19.} \\
+Naj bo $(A, \cdot)$ polgrupa z neutralnim elementom. \\
+Za $\forall a \in A$ in $\forall n \in \mathbb{N}$ definirajmo POTENCO $a^n$ kot
+\begin{align*}
+    a^1 &= a \\
+    a^2 &= a \cdot a \\
+    &\phantom{=} \vdots \\
+    a^{n+1} &= a^n \cdot a = a \cdot a \cdot a \dots a 
+\end{align*}
+Dodatno definirajmo, $a^0 = 1$. \\
+Če je element $a \in A$ obrnljiv definiramo
+$$
+\forall n \in \mathbb{N} \text{ } \text{ } \text{ } \text{ } a^{-n} = a^{(-1)n} = (a^{-1})^n
+$$
+
+
+
+\vspace*{24pt}
+
+
+\noindent
+\textbf{Izrek 1.20.} (Adicijski izrek) \\
+Naj bo $(A, \cdot)$ polgrupa z neutralnim elementom in naj bosta $m, n \in \mathbb{N}_0$. \\
+Potem $\forall a \in A$ velja $a^{m + n} = a^m \cdot a^n$ \\
+Če je $a \in A$ obrnljiv, velja adicijski izrek $\forall m, n \in \mathbb{Z}$.
+
+
+
+\vspace*{24pt}
+
+
+\noindent
+\textbf{Definicija 1.21.} \\
+Naj bo $(A, \cdot)$ polgrupa z neutralnim elementom. \\
+Element $a \in A$ ima KONČEN RED, če obstaja $n \in \mathbb{N}$, da je $a^n = 1$. \\
+V tem primeru najmanjšem številu $r \in \mathbb{N}$ za katerega je $a^r = 1$, rečemo \\
+RED ELEMENTA $a$. \\[1em]
+opomba 1: $|a|$ (red elementa $a$) \\
+opomba 2: v primeru $(A, +)$ $a^n \to na$ in $1 \to 0$
+
+
+
+\vspace*{24pt}
+
+
+\noindent
+\textbf{Zgled 1.22.} \\[1em]
+a)  $A = \mathbb{Z} \backslash \{ 0 \}$ \\
+\hspace*{1em} $\cdot$ je običajno množenje celih števil $\implies$ $(\mathbb{Z} \backslash \{0\}, \cdot)$ 
+\begin{align*}
+    1 \in \mathbb{Z} \backslash \{0\} &: 1^1 = 1, 1^2 = 1, 1^3 = 1, \dots \text{ element 1 ima končen red, red elementa 1 je 1} \\
+    2 \in \mathbb{Z} \backslash \{0\} &: 2^1 = 2, 2^2 = 2 \cdot 2 = 4, 2^3 = 2 \cdot 2 \cdot 2 = 8, \dots \text{ nima končnega reda}
+\end{align*}
+Torej, števila večja od 1 nimajo končnega reda.
+\begin{align*}
+    -1 \in \mathbb{Z} \backslash \{0\} &: (-1)^1 = -1, (-1)^2 = (-1) \cdot (-1) = 1 \text{ red elementa -1 je 2}
+\end{align*} \\
+
+\noindent
+b) $A = S^1 = \{ z \in \mathbb{C}; |z| = 1 \}$ \\
+\hspace*{1em} $\cdot$ običajno množenje kompleksnih števil.
+\begin{center}
+    \begin{tikzpicture}
+      \draw (0,0) circle [radius=1];
+      \draw[->] (-1.2,0) -- (1.2,0);
+      \draw[->] (0,-1.2) -- (0,1.2);
+      \fill (1,0) circle[radius=1pt] node[below right] {$1$};
+      \fill (-1,0) circle[radius=1pt] node[below left] {$-1$};
+      \fill (0,1) circle[radius=1pt] node[above right] {$i$};
+      \fill (0,-1) circle[radius=1pt] node[below right] {$-i$};
+    \end{tikzpicture}
+\end{center}
+$$
+0 + 1i = i \in S^1: i^1 = i, i^2 = -1, i^3 = -i, i^4 = 1 \text{ red elementa } i \text{ je 4}
+$$
+\begin{align*}
+    -i \in S^1: (-i)^1 &= -i, (-i)^2 = (-i) \cdot (-i) = -1 \\
+    (-i)^3 &= (-i)^1 \cdot (-i)^2 = -i \cdot (-1) = i \\
+    (-i)^4 &= (-i)^2 \cdot (-i)^2 = (-1) \cdot (-1) = 1 \text{ red elementa } -i \text{ je 4}
+\end{align*} \\
+
+\noindent
+c) $A = \mathbb{Z}$
 
 
 
