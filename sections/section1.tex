@@ -1,0 +1,344 @@
+\section{Osnovne algebrske strukture}
+
+\subsection{Algebrska struktura}
+
+\subsubsection{Definicija}
+Naj bo $S$ poljubna neprazna množica. \\
+Vsaki preslikavi $\varphi : S \times S \to S$ rečemo DVOMESTNA NOTRANJA OPERACIJA \\ (ali DNO) na množici $S$. \\[1em]
+Sliko urejenega para $(a, b) \in S \times S$ pišemo $a\varphi b$ (namesto običajnega zapisa $\varphi(a, b)$) \\ in jo imenujemo KOMPOZITUM (SESTAV) ELEMENTOV $a$ in $b$ iz $S$. \\[1em]
+Dvomestno notranjo operacijo označujemo z znaki: $+, \cdot, \circ, *,\triangle, \heartsuit, \dots$
+
+\subsubsection{Zgled}
+\begin{enumerate}[label=\alph*)]
+    \item $S = \mathbb{N}$ \\ $\circ$ je običajno seštevanje naravnih števil. \\ $\Rightarrow$ je DNO, saj $\forall a, b \in \mathbb{N}$ je $a \circ b \in \mathbb{N}$.
+    \item $S = \mathbb{N}$ \\ $\circ$ je običajno odštevanje naravnih števil. \\ $\Rightarrow$ ni DNO, npr. za $1 \circ 2 = 1 - 2 = -1 \notin \mathbb{N}$.
+\end{enumerate}
+
+\subsubsection{Definicija}
+DNO $\circ$ na množici $S \ne \emptyset$ je ASOCIATIVNA če za vse elemente $a, b, c \in S$ velja
+\begin{align*}
+    (a \circ b) \circ c = a \circ (b \circ c)
+\end{align*}
+KOMUTATIVNA, če za vsaka elementa $a, b \in S$ velja
+\begin{align*}
+    a \circ b = b \circ a
+\end{align*}
+
+\subsubsection{Zgled}
+\begin{enumerate}[label=\alph*)]
+    \item $S = \mathbb{Z}$ \\ $\circ$ je običajno seštevanje celih števil. \\ $\Rightarrow$ je DNO. \\ $\Rightarrow \circ$ je komutativna, in je asociativna.
+    \item $S = \mathbb{Z}$ \\ $\circ$ je običajno odštevanje celih števil. \\ $\Rightarrow$ je DNO.
+    \begin{align*}
+        a &= 1, b = 0 \\
+        a \circ b &= 1 - 0 = 1 \\
+        b \circ a &= 0 - 1 = -1   
+    \end{align*}
+    $\Rightarrow$ ni komutativna.
+    \begin{align*}
+        a = 1, b &= 2, c = 3 \\
+        (a \circ b) \circ c = & (1 - 2) - 3 = -4 \\
+        a \circ (b \circ c) = & 1 - (2 - 3) = 2   
+    \end{align*}
+    $\Rightarrow$ ni asociativna.
+    \item $S = \mathbb{R}^{n \times n}$ (kvadratne matrike z realnimi koeficienti) \\ $\circ$ je običajno množenje matrik. \\ $\Rightarrow$ je DNO, ker je rezultat zmnožka spet kvadratna matrika velikosti $n \times n$ z realnimi koeficienti.
+    \begin{align*}
+        A = 
+        \begin{bmatrix}
+            a_1 & b_1 \\
+            c_1 & d_1 \\
+        \end{bmatrix}, 
+        B = &
+        \begin{bmatrix}
+            a_2 & b_2 \\
+            c_2 & d_2 \\
+        \end{bmatrix},
+        C = 
+        \begin{bmatrix}
+            a_3 & b_3 \\
+            c_3 & d_3 \\
+        \end{bmatrix} \\
+    \end{align*}
+    $\Rightarrow$ je asociativno.
+    \begin{align*}
+        A = 
+        \begin{bmatrix}
+            1 & 1 \\
+            1 & 1 \\
+        \end{bmatrix}, 
+        B = 
+        \begin{bmatrix}
+            1 & 1 \\
+            0 & 0 \\
+        \end{bmatrix} \\[1em]
+        A \circ B = 
+        \begin{bmatrix}
+            1 & 1 \\
+            1 & 1 \\
+        \end{bmatrix} \cdot 
+        \begin{bmatrix}
+            1 & 1 \\
+            0 & 0 \\
+        \end{bmatrix}
+        = 
+        \begin{bmatrix}
+            1 & 1 \\
+            1 & 1 \\
+        \end{bmatrix} \\[1em]
+        B \circ A = 
+        \begin{bmatrix}
+            1 & 1 \\
+            0 & 0 \\
+        \end{bmatrix} \cdot 
+        \begin{bmatrix}
+            1 & 1 \\
+            1 & 1 \\
+        \end{bmatrix} =
+        \begin{bmatrix}
+            2 & 2 \\
+            0 & 0 \\
+        \end{bmatrix}
+    \end{align*}
+    $\Rightarrow$ ni komutativno.
+\end{enumerate}
+
+\subsubsection{Trditev}
+Če je DNO $\circ$ na $S \ne \emptyset$ asociativna, potem je produkt (kompozitum) elementov 
+$$a_1, a_2, \dots, a_n \in S \text{ } \text{ } \text{ } (n \in \mathbb{N})$$ 
+natančno določen z vrstnim redom teh elementov. Tak produkt označimo z
+$$a_1 \circ a_2 \circ \dots \circ a_n$$
+
+\paragraph{Dokaz:}
+izpustimo!
+
+\subsubsection{Trditev}
+Če je $\circ$ asociativna in komutativna DNO na $S \ne \emptyset$, potem je naš produkt elementov
+$$a_1, a_2, \dots, a_n \in S \text{ } \text{ } \text{ } (n \in \mathbb{N})$$
+enolično določen ne glede na vrstni red naših elementov.
+
+\paragraph{Dokaz:}
+izpustimo!
+
+\subsubsection{Definicija}
+Naj bo $S \ne \emptyset$ z DNO $\circ$. \\[1em]
+Element $l \in S$ je LEVI NEUTRALNI ELEMENT v množici $S$, če za $\forall a \in S$ velja
+$$l \circ a = a$$ \\[1em]
+Element $d \in S$ je DESNI NEUTRALNI ELEMENT v množici $S$, če za $\forall a \in S$ velja
+$$a \circ d = a$$ \\[1em]
+Če je $e \in S$ hkrati levi in desni neutralni element v množici $S$, mu rečemo NEUTRALNI ELEMENT. \\[1em]
+Oznaka: $(S, \circ)$ ... neprazna množica $S$ z DNO $\circ$.
+
+\subsubsection{Trditev}
+Če $(S, \circ)$ premore levi in desni neutralni element, potem sta enaka.
+
+\paragraph{Dokaz:}
+Naj bo $l \in S$ levi neutralni element in $d \in S$ desni neutralni element v množici $S$, potem je
+$$l = l \circ d = d$$
+Torej sklepamo, da je $l = d$, kar smo želeli pokazati.
+
+\subsubsection{Zgled}
+\begin{enumerate}[label=\alph*)]
+    \item $S = \mathbb{R}^{2 \times 2} = 
+    \left\{ 
+        \begin{bmatrix}
+            a & b \\
+            c & d
+        \end{bmatrix} 
+    ;
+    a, b, c, d \in \mathbb{R}
+    \right\}$ \\[1em]
+    $\circ$ je običajno množenje matrik. \\[1em]
+    $\Rightarrow$ je DNO. \\[1em]
+    $I = \begin{bmatrix}
+        1 & 0 \\
+        0 & 1
+    \end{bmatrix}$ je neutralni element, saj za $\forall A \in S$ velja $I \cdot A = A \cdot I = A$. \\[1em]
+    \item $S = \left\{
+        \begin{bmatrix}
+            a & b \\
+            0 & 0
+        \end{bmatrix};
+        a, b \in \mathbb{R}
+    \right\}$ \\ [1em]
+    $\circ$ je običajno množenje matrik.
+    \begin{align*}
+        \begin{bmatrix}
+            a & b \\
+            0 & 0
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            x & y \\
+            0 & 0
+        \end{bmatrix}
+        = 
+        \begin{bmatrix}
+            ax & ay \\
+            0 & 0
+        \end{bmatrix}
+    \end{align*}
+    $\Rightarrow$ je DNO.
+    \begin{align*}
+        \text{LEVI NEUTRA} & \text{LNI ELEMENT} \\[1em]
+        \begin{bmatrix}
+            ax & ay \\
+            0 & 0 \\
+        \end{bmatrix}
+        &= 
+        \begin{bmatrix}
+            x & y \\
+            0 & 0 \\
+        \end{bmatrix} \\
+        &\Downarrow \\
+        a = 1, b &= \text{ poljuben } \\
+        &\Downarrow \\
+        \forall b \in \mathbb{R} \text{ je }
+        \begin{bmatrix}
+            1 & b \\
+            0 & 0 \\    
+        \end{bmatrix} 
+        \text{ levi } & \text{neutralni element v } S. \\
+        &\Downarrow \\
+        \text{Levih neutralnih elemen} & \text{tov je neskončno mnogo.}
+    \end{align*}
+
+    \begin{align*}
+        \text{DESNI NEUTR} & \text{ALNI ELEMENT} \\[1em]
+        \begin{bmatrix}
+            ax & ay \\
+            0 & 0 \\
+        \end{bmatrix}
+        &= 
+        \begin{bmatrix}
+            a & b \\
+            0 & 0 \\
+        \end{bmatrix} \\
+        & \Downarrow \\
+        ax = a & \Rightarrow x = 1 \\
+        ay = b & \Rightarrow y = \frac{b}{a} \\
+        & \Downarrow \\
+        \text{ Ni OK! Ker } & \text{je odvisno od } a, b. \\
+        & \Downarrow \\
+        \text{Desni neutralni } & \text{element ne obstaja!}        
+    \end{align*}
+\end{enumerate}
+
+\subsubsection{Definicija}
+Naj bo $(S, \circ)$ premore neutralni element $e \in S$, ter naj bo $a \in S$ poljuben. \\[1em]
+Potem $l \in S$ je LEVI OBRAT (ali INVERZ) ELEMENTA $a \in S$ če velja
+$$l \circ a = e$$
+Element $d \in S$ je DESNI OBRAT ELEMENTA $a \in S$ če velja
+$$a \circ d = e$$
+OBRAT ELEMENTA $a \in S$ je tak element iz $S$, ki je levi in desni obrat elementa $a$. \\[1em]
+Element $a \in S$ je \underline{obrnljiv} (v množici $S$) če premore obrat v množici $S$.
+
+\subsubsection{Trditev}
+Naj veljajo oznake iz definicije 1.1.10. 
+Neutralni element $e$ je obrat samega sebe.
+
+\paragraph{Dokaz:}
+$$e \circ e = e$$
+
+\subsubsection{Trditev}
+Naj bo $S \ne \emptyset$ z DNO $\circ$, ki je asociativna in naj bo
+$e \in S$ neutralni element. Če ima element $a \in S$ levi in desni obrat v $S$
+potem sta enaka.
+
+\paragraph{Dokaz:} Naj veljajo predpostavke iz trditve 1.1.12 in $a \in S$.
+$$ \exists \text{ levi obrat za } a \text{ v } S \Rightarrow \exists l \in S: l \circ a = e $$
+$$ \exists \text{ desni obrat za } a \text{ v } S \Rightarrow \exists d \in S: a \circ d = e $$
+Potem je
+$$ (l \circ a) \circ d = e \circ d = d $$
+$$ l \circ (a \circ d) = l \circ e = l $$
+ker je $\circ$ asociativna operacija. Torej je $l = d$.
+
+\subsubsection{Definicija}
+Če je $S \ne \emptyset$ z DNO $\circ$, ki je asociativna, potem rečemo, da je $(S, \circ)$ POLGRUPA.\\
+Polgrupa z neutralnim elementom je MONOID. \\
+Monoid v katerem je vsak element obrnljiv je GRUPA.
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        $(S, \circ)$ & $\circ$ asociativna & $\exists$ neutralen element & $\forall a \in S$ je obrnljiv \\
+        \hline
+        POLGRUPA & $\checkmark$ & $\times$ & $\times$ \\
+        \hline
+        MONOID & $\checkmark$ & $\checkmark$ & $\times$ \\
+        \hline
+        GRUPA & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsubsection{Definicija}
+Če izbrano DNO na $S \ne \emptyset$ označimo s +, potem govorimo o SEŠTEVAJOČEM \\
+(ali ADITIVNEM) ZAPISU. \\[1em]
+Element $a + b$ je VSOTA elementov $a, b \in S$, neutralni element označimo z $0 \in S$ \\
+(in mu rečemo ničla), obratu elementa $a \in S$ rečemo NASPROTNI ELEMENT in ga \\
+označimo z $-a$. \\[1em]
+Če izbrano DNO na $S \in \emptyset$ označimo z $\cdot$, potem govorimo o MNOŽEČEM \\
+(ali MULTIPLIKATIVNEM) ZAPISU.
+$$a \cdot b = ab$$
+Element $ab$ je zmnožek (ali PRODUKT) elementa $a, b \in S$, neutralni element označimo \\
+z $1 \in S$ (in mu rečemo enka), obratu elementa $a \in S$ rečemo INVERZ, označimo z $a^{-1}$.
+
+\subsubsection{Definicija}
+Naj bo $\Omega \ne \emptyset$.
+$Map(\Omega) = \{ f : \Omega \to \Omega \}$ $\leftarrow$ množica vseh preslikav iz $\Omega$ v $\Omega$. \\
+Množico $Map(\Omega)$ opremimo z (običajno) operacijo levega sestavljanja preslikav:
+$$
+\forall f, g : \Omega \to \Omega \text{ je } f \circ g : \Omega \to \Omega
+$$ 
+$$
+\text{in } \forall x \in \Omega \text{ velja } (f\circ g)(x) = f(g(x))
+$$ \\
+Operacija $\circ$ iz definicije 1.1.15 je DNO na $Map(\Omega)$.
+
+\subsubsection{Trditev}
+$(Map(\Omega), \circ)$ je monoid.
+
+\paragraph{Dokaz:}
+\begin{enumerate}[label=\Roman*)]
+    \item $\circ$ je asociativna. (moramo dokazati, oz. dokazano spodaj) 
+    $$
+    \forall f, g, h \in Map(\Omega) : (f \circ g) \circ h = f \circ (g \circ h)
+    $$
+    Opazimo:
+    \begin{align*}
+        ((f \circ g) \circ h)(x) = f(g(h(x))) \\
+        (f\circ (g \circ h))(x) = f(g(h(x)))
+    \end{align*}
+    \item $\exists$ neutralnega elementa v $Map(\Omega)$ za $\circ$
+    $$
+    \forall x \in \Omega \text{ naj bo } id : x \to x \text{ (identična preslikava)}
+    $$
+    $$
+    \text{Pogazati moramo: } \forall f \in Map(\Omega): f \circ id = id \circ f = f
+    $$
+    \begin{align*}
+        \forall x \Omega \text{ velja: } & (f \circ id)(x) = f(id(x)) = f(x) \\
+        & (id \circ f)(x) = id(f(x)) = f(x)
+    \end{align*}
+\end{enumerate}
+
+\subsubsection*{1.1.15 \space \space Definicija (nadaljevanje)}
+Podobno definiramo:
+\begin{align*}
+    Inj(\Omega) &= \{ f: \Omega \to \Omega ; f \text{ je injektivna}\} \\
+    Sur(\Omega) &= \{ f: \Omega \to \Omega ; f \text{ je surjektivna} \} \\
+    Bij(\Omega) &= \{ f: \Omega \to \Omega ; f \text{ je bijektivna} \}       
+\end{align*}
+in jih opremimo z operacijo sestavljanja preslikav z istim predpisom.
+
+\subsubsection{Trditev}
+$(Inj(\Omega), \circ)$ in $(Sur(\Omega), \circ)$ sta monoida, $(Bij(\Omega), \circ)$ je grupa.
+\paragraph{Dokaz:} D.N. (za domačo nalogo)
+
+\subsubsection{Trditev}
+
+
+
+
+
+
+
+
