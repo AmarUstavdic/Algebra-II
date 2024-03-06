@@ -1,0 +1,47 @@
+
+\section{Vektorski prostori}
+
+Vektorski prostor, polje $\mathbb{R}, \mathbb{C}, \mathbb{Q}, \mathbb{Z}_p$, $p$ praštevilo, $\mathbb{F}, \mathbb{F}_2, \mathbb{F}_3$.
+
+\subsection{Definicija}
+Naj bo $V \ne \emptyset$ z DNO $+ : V \times V \to V$.
+Naj bo $\mathbb{F}$ polje in $\cdot : \mathbb{F} \times V \to V$. \\
+Algebrska struktura $(V, \mathbb{F}, +, \cdot)$ je VEKTORSKI PROSTOR, če velja:
+\begin{vpenumerate}
+    \item $\forall u, v, w \in V: (u + v) + w = u + (v + w)$ \\ + je asociativna na množici $V$.
+    \item $\forall 0 \in V: \forall v \in V: v + 0 = v = 0 + v$ \\ obstaja neutralni element za +.
+    \item $(\exists -v \in V): v + (-v) = 0 = (-v) + v$ \\ vsak element iz množice $V$ ima nasprotni element.
+    \item $\forall u, v \in V: u + v = v + u$ \\ + je komutativna operacija na $V$.
+    \item $\forall \alpha, \beta \in \mathbb{F}, \forall v \in V: (\alpha \beta)v = \alpha(\beta v)$
+    \item $\forall \alpha \in \mathbb{F}, \forall u, v \in V: \alpha(v + u) = \alpha v + \alpha u$
+    \item $\forall \alpha, \beta \in \mathbb{F}, \forall v \in V: (\alpha + \beta)v = \alpha v + \beta v$
+    \item $\forall v \in V: 1_{\mathbb{F}} \cdot v = v$
+\end{vpenumerate}
+Rečemo, da je $V$ \underline{vektorski prostor} nad poljem $\mathbb{F}$ za operaciji $+$ in $\cdot$. \\[1em]
+Vsakemu elementu iz $V$ rečemo VEKTOR in vsakemu elementu iz polja $\mathbb{F}$ rečemo SKALAR.
+
+\begin{align*}
+    + &: V \times V \to V &&\text{ (seštevanje vektorjev)} \\
+    \cdot &: \mathbb{F} \times V \to V &&\text{ (množenje skalarja z vektorjem)} \\
+    + &: \mathbb{F} \times \mathbb{F} \to \mathbb{F} &&\text{ (seštevanje skalarjev)} \\
+    \cdot &: \mathbb{F} \times \mathbb{F} \to \mathbb{F} &&\text{ (množenje skalarjev)}
+\end{align*}
+
+\subsection{Zgled}
+\begin{enumerate}[label=\alph*)]
+    \item 
+    \begin{align*}
+        &V = \{0\} && 0 + 0 = 0 \\
+        &\mathbb{F} \text{ poljubno polje} && \forall \alpha \in \mathbb{F}: \alpha \cdot 0 = \alpha (0 + 0) = \alpha \cdot + \alpha \cdot 0
+    \end{align*}
+    \begin{align*}
+        (\{0\},\mathbb{F}, +, \cdot) \text{ je vektorski prostor.}
+    \end{align*}
+    $V$ je v.p. nad poljem $\mathbb{F}$  za tako definirani operaciji $+$, $\cdot$. \\
+    Rečemo mu TRIVIALNI VEKTORSKI PROSTOR.
+    \item 
+    \begin{align*}
+        &\mathbb{F} \text{ polje, } n \in \mathbb{N} \\    
+        &\mathbb{F}^{n} = \mathbb{F} \times \mathbb{F} \times \dots \times \mathbb{F} = \{(a_1, a_2, \dots, a_n); a_1, a_2, \dots, a_n \in \mathbb{F}\} 
+    \end{align*}
+\end{enumerate}
